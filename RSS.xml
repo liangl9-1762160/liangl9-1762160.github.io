@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+
+<channel>
+  <title>Liang Li--INFO 101 Page</title>
+  <link>https://liangl9-1762160.github.io/index.html</link>
+  <description>info 101 website building</description>
+  <item>
+    <title>Media page</title>
+    <link>https://liangl9-1762160.github.io/mediapage.html</link>
+    <description>multi-media page</description>
+  </item>
+  
+</channel>
+
+</rss>
