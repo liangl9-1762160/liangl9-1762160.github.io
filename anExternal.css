@@ -1,0 +1,28 @@
+body {
+    background-color: blanchedalmond;
+}
+
+h1 {
+    color: black;
+    margin-left: 50px;
+}
+
+#rcorners1 {
+    border-radius: 25px;
+    border: 2px solid pink;
+    padding: 20px; 
+    width: 200px;
+    height: 200px; 
+}
+
+img {
+    float: left;
+}
+
+span {
+    float: left;
+    width: 0.7em;
+    font-size: 400%;
+    font-family: algerian, courier;
+    line-height: 80%;
+}
