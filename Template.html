@@ -13,17 +13,17 @@
                 const s2 = '*Email US V-team (usmcall@microsoft.com) and US On-Duty Manager (asimamreqms@microsoft.com)<br>';
                 const s3 = '*Call Mooncake Team On-call: +86 13501686912<br>';
                 
-                if (hour >= 8 && hour < 12) {
+                if (hour >= 8 && hour < 22) {
                     document.getElementById('sol').innerHTML = 'Please contact China Team:<br>'+s1;
                 } else {
-                    if (hour >= 15) {
+                    if (hour < 8) {
                         day.setDate(day.getDate()-1);
                     }
                     var formatted_day = day.getFullYear()+"/"+(day.getMonth()+1)+"/"+day.getDate();
                     if (NOAM_holiday.has(formatted_day)) {
-                        document.getElementById('sol').innerHTML = formatted_day+'Please contact the on-call manager AND Email China Team:<br>'+s3+s1;
+                        document.getElementById('sol').innerHTML = 'Please contact the on-call manager AND Email China Team:<br>'+s3+s1;
                     } else {
-                        document.getElementById('sol').innerHTML = formatted_day+'China Mooncake Team is off work, please contact US Team AND Email China Team:<br>'+s2+s1;
+                        document.getElementById('sol').innerHTML = 'China Mooncake Team is off work, please contact US Team AND Email China Team:<br>'+s2+s1;
                     }
 
 
