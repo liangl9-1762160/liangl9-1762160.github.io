@@ -17,10 +17,6 @@
                 document.getElementById('ct').innerHTML = x;
                 display_c();
                // var NOAM_holiday = [];
-                //let hour = x.getHours();
-                //if (hour >= 8 AND hour < 22) {
-                  //  alert("Email!");
-                //} 
             }  
             
            
@@ -31,7 +27,6 @@
         <span id='ct' ></span>
         
         <h2>Your Solution</h2>
-        <p id='sol'></p>
         <script type="text/javascript">
             function solution() {
                 let hour = new Date().getHours();
@@ -39,10 +34,10 @@
                     document.getElementById('sol').innerHTML = "Good day!";
                 }
             }
-            mysol=setTimeout('solution()',refresh)
+            mysol=setTimeout('solution()',1000)
             
         </script>
-        
+        <span id='sol' ></span>
             
             
     </body>
