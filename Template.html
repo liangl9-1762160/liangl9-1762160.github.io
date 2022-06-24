@@ -3,10 +3,17 @@
     <head>
         <title>TR Team Guidance</title>
     </head>
-    <body>
+    <body onload="display_ct()">
         <h1>For TR Team: Mooncake Team Contact Guide</h1>
         <h2>Current Time</h2>
         <script type="text/javascript"> 
+            function solution() {
+                var hour = new Date().getHours();
+                if (hour >= 8 AND hour < 22) {
+                    document.getElementById('sol').innerHTML = "Good day!";
+                }
+            }
+            
             function display_c(){
                 var refresh=1000; // Refresh rate
                 mytime=setTimeout('display_ct()',refresh)
@@ -16,23 +23,14 @@
                 var x = new Date();   
                 document.getElementById('ct').innerHTML = x;
                 display_c();
+                solution();
             }  
             
         </script>
-        <body onload=display_ct();>
         <span id='ct' ></span>
-        
+        <span id='sol'></span> 
         <h2>Your Solution</h2>
-        
-        <script type="text/javascript">
-            function solution() {
-                var hour = new Date().getHours();
-                if (hour >= 8 AND hour < 22) {
-                    document.getElementById('sol').innerHTML = "Good day!";
-                }
-            }
-        </script>
-            
+          
                 
     </body>
 </html>
