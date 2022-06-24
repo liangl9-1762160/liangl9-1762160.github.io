@@ -16,7 +16,7 @@
                 if (hour >= 8 && hour < 12) {
                     document.getElementById('sol').innerHTML = 'Please contact China Team:<br>'+s1;
                 } else {
-                    if (hour > 15) {
+                    if (hour >= 15) {
                         day.setDate(day.getDate()-1);
                     }
                     var formatted_day = day.getFullYear()+"/"+(day.getMonth()+1)+"/"+day.getDate();
