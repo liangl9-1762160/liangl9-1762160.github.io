@@ -10,6 +10,10 @@
             function display_c(){
                 var refresh=1000; // Refresh rate in milli seconds
                 mytime=setTimeout('display_ct()',refresh)
+                let hour = mytime.getHours();
+                if (hour >= 8 AND hour < 22) {
+                    alert("Email!");
+                }
             }
 
             function display_ct() {
