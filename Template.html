@@ -36,9 +36,10 @@
             function solution() {
                 let hour = new Date().getHours();
                 if (hour >= 8 AND hour < 22) {
-                    document.getElementById("sol").innerHTML = "Good day!";
+                    document.getElementById('sol').innerHTML = "Good day!";
                 }
             }
+            mysol=setTimeout('solution()',refresh)
             
         </script>
         
