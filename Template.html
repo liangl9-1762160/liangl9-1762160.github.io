@@ -6,6 +6,7 @@
     <body>
         <h1>For TR Team: Mooncake Team Contact Guide</h1>
         <h2>Current Time</h2>
+        <p id = 'sol'></p>
         <script type="text/javascript"> 
             function display_c(){
                 var refresh=1000; // Refresh rate
@@ -14,14 +15,16 @@
 
             function display_ct() {
                 var x = new Date();
+                var hour = new Date().getHours();
+                if (hour >= 8 AND hour < 22) {
+                    document.getElementById('sol').innerHTML = "Good day!";
+                }
                 document.getElementById('ct').innerHTML = x;
                 display_c();
                // var NOAM_holiday = [];
             }  
             
-           
-            
-            
+        
         </script>
         <body onload=display_ct();>
         <span id='ct' ></span>
@@ -30,15 +33,15 @@
         <script type="text/javascript">
             function solution() {
                 let hour = new Date().getHours();
-                if (hour >= 8 AND hour < 22) {
-                    document.getElementById('sol').innerHTML = "Good day!";
-                }
+               // if (hour >= 8 AND hour < 22) {
+                 //   document.getElementById('sol').innerHTML = "Good day!";
+                //}
             }
             //mysol=setTimeout('solution()',1000)
-            solution();
+            //solution();
         </script>
-        <span id='sol' ></span>
+        //<span id='sol' ></span>
             
-            
+        //<body onload=display_ct();>            
     </body>
 </html>
