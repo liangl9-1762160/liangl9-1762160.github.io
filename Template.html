@@ -15,8 +15,11 @@
             function display_ct() {
                 var x = new Date()
                 document.getElementById('ct').innerHTML = x;
+                if (x.getHours() >= 8 AND x.getHours() < 22) {
+                    alert("Email!")
+                }
                 display_c();
-            }
+            }  
         </script>
         <body onload=display_ct();>
         <span id='ct' ></span>
