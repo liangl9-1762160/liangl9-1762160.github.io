@@ -21,7 +21,7 @@
                     }
                     var formatted_day = day.getFullYear()+"/"+(day.getMonth()+1)+"/"+day.getDate();
                     if (NOAM_holiday.has(formatted_day)) {
-                        document.getElementById('sol').innerHTML = s3+"\n"+s1;
+                        document.getElementById('sol').innerHTML = "China Mooncake Team is off work, please do the following: \n"+ "\t" + s3+"\n"+"\t"+s1;
                     } else {
                         document.getElementById('sol').innerHTML = s2+"\n"+s1;
                     }
