@@ -13,7 +13,7 @@
             }
 
             function display_ct() {
-                var x = new Date()
+                var x = new Date();
                 document.getElementById('ct').innerHTML = x;
                 display_c();
                // var NOAM_holiday = [];
@@ -22,14 +22,23 @@
                   //  alert("Email!");
                 //} 
             }  
+            
+           
+            }
+            
         </script>
         <body onload=display_ct();>
         <span id='ct' ></span>
         
         <h2>Your Solution</h2>
-        <p id='math'></p>
+        <p id='sol'></p>
         <script type="text/javascript">
-            document.getElementById('math').innerHTML = "Email!";
+            function solution() {
+                let hour = new Date().getHours();
+                if (hour >= 8 AND hour < 22) {
+                    document.getElementById("sol").innerHTML = "Good day!";
+                }
+            }
             
         </script>
         
