@@ -6,9 +6,15 @@
     <script type="text/javascript"> 
             function solution() {
                 var hour = new Date().getHours();
+                var day = new Date().getDate();
+                
+                var s1 = "Email Mooncake Support Team (gcmcfte@microsoft.com) and Mooncake TA (mcpodta@microsoft.com)\";
+                var s2 = "Email US V-team (usmcall@microsoft.com) and US On-Duty Manager (asimamreqms@microsoft.com)\";
+                var s3 = "Call Mooncake Team On-call: +86 13501686912\";
+                
                 if (hour >= 8 && hour < 22) {
-                    document.getElementById('sol').innerHTML = "Good day!";
-                }
+                    document.getElementById('sol').innerHTML = s1;
+                } 
             }
             
             function display_c(){
