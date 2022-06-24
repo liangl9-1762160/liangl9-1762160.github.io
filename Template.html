@@ -21,9 +21,9 @@
                     }
                     var formatted_day = day.getFullYear()+"/"+(day.getMonth()+1)+"/"+day.getDate();
                     if (NOAM_holiday.has(formatted_day)) {
-                        document.getElementById('sol').innerHTML = 'Please contact the on-call manager AND Email China Team:<br>'+s3+s1;
+                        document.getElementById('sol').innerHTML = formatted_day+'Please contact the on-call manager AND Email China Team:<br>'+s3+s1;
                     } else {
-                        document.getElementById('sol').innerHTML = 'China Mooncake Team is off work, please contact US Team AND Email China Team:<br>'+s2+s1;
+                        document.getElementById('sol').innerHTML = formatted_day+'China Mooncake Team is off work, please contact US Team AND Email China Team:<br>'+s2+s1;
                     }
 
 
