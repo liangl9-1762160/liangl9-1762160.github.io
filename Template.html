@@ -7,7 +7,7 @@
             function solution() {
                 var hour = new Date().getHours();
                 var day = new Date();
-                var NOAM_holiday = new Set(["2022/6/24","2022/7/1", "2022/7/4", "2022/8/1", "2022/9/5", "2022/10/10", "2022/11/24", "2022/11/25", "2022/12/23", "2022/12/26"]);
+                var NOAM_holiday = new Set(["2022/6/23","2022/7/1", "2022/7/4", "2022/8/1", "2022/9/5", "2022/10/10", "2022/11/24", "2022/11/25", "2022/12/23", "2022/12/26"]);
                 
                 const s1 = '*Email Mooncake Support Team (gcmcfte@microsoft.com) and Mooncake TA (mcpodta@microsoft.com)<br>';
                 const s2 = '*Email US V-team (usmcall@microsoft.com) and US On-Duty Manager (asimamreqms@microsoft.com)<br>';
@@ -16,14 +16,14 @@
                 if (hour >= 8 && hour < 12) {
                     document.getElementById('sol').innerHTML = 'Please contact China Team:<br>'+s1;
                 } else {
-                    if (hour < 8) {
+                    if (hour > 15) {
                         day.setDate(day.getDate()-1);
                     }
                     var formatted_day = day.getFullYear()+"/"+(day.getMonth()+1)+"/"+day.getDate();
                     if (NOAM_holiday.has(formatted_day)) {
-                        document.getElementById('sol').innerHTML = 'Please contact the On-call manager and keep records with China Team:<br>'+s3+s1;
+                        document.getElementById('sol').innerHTML = 'Please contact the on-call manager AND Email China Team:<br>'+s3+s1;
                     } else {
-                        document.getElementById('sol').innerHTML = 'China Mooncake Team is off work, please contact US Team and keep records with China Team:<br>'+s2+s1;
+                        document.getElementById('sol').innerHTML = 'China Mooncake Team is off work, please contact US Team AND Email China Team:<br>'+s2+s1;
                     }
 
 
