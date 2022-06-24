@@ -6,7 +6,8 @@
     <script type="text/javascript"> 
             function solution() {
                 var hour = new Date().getHours();
-                var day = new Date().getDate();
+                var day = new Date();
+                var NOAM_holiday = new Set(["2022/7/1", "2022/7/4", "2022/8/1", "2022/9/5", "2022/10/10", "2022/11/24", "2022/11/25", "2022/12/23", "2022/12/26"]);
                 
                 var s1 = "Email Mooncake Support Team (gcmcfte@microsoft.com) and Mooncake TA (mcpodta@microsoft.com)\n";
                 var s2 = "Email US V-team (usmcall@microsoft.com) and US On-Duty Manager (asimamreqms@microsoft.com)\n";
@@ -14,7 +15,20 @@
                 
                 if (hour >= 8 && hour < 22) {
                     document.getElementById('sol').innerHTML = s1;
-                } 
+                } else {
+                    if (hour < 8) {
+                        day.setDate(day.getDate()-1);
+                    }
+                    var formatted_day = day.getFullYear()+"/"+(day.getMonth()+1)+"/"+day.getDate();
+                    if (NOAM_holiday.has(formatted_day)) {
+                        document.getElementById('sol').innerHTML = s3+s1;
+                    } else {
+                        document.getElementById('sol').innerHTML = s2+s1;
+                    }
+
+
+                }
+
             }
             
             function display_c(){
