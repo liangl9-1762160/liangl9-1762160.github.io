@@ -15,13 +15,13 @@
             function display_ct() {
                 var x = new Date()
                 document.getElementById('ct').innerHTML = x;
+                display_c();
                // var NOAM_holiday = [];
                 let hour = x.getHours();
                 if (hour >= 8 AND hour < 22) {
                     alert("Email!");
                 } 
-                
-                display_c();
+                //display_c();
             }  
         </script>
         <body onload=display_ct();>
