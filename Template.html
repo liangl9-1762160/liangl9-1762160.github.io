@@ -16,9 +16,9 @@
                 var x = new Date()
                 document.getElementById('ct').innerHTML = x;
                // var NOAM_holiday = [];
-                
-                if (x.getHours() >= 8 AND x.getHours() < 22) {
-                    document.getElementById('Text').innerHTML = "Email!"；
+                let hour = x.getHours();
+                if (hour >= 8 AND hour < 22) {
+                    alert("Email!");
                 } 
                 
                 display_c();
@@ -26,7 +26,6 @@
         </script>
         <body onload=display_ct();>
         <span id='ct' ></span>
-        <p id="Text"></p>
         
     </body>
 </html>
